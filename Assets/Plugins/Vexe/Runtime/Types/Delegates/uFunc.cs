@@ -16,6 +16,14 @@ namespace Vexe.Runtime.Types
 			get { return typeof(TReturn); }
 		}
 
+		public uFunc()
+			: base()
+		{ }
+
+		public uFunc(Func<TReturn> handler)
+			: base(handler)
+		{ }
+
 		public TReturn Invoke()
 		{
 			return Value.SafeInvoke();
@@ -53,6 +61,14 @@ namespace Vexe.Runtime.Types
 		{
 			get { return typeof(TReturn); }
 		}
+
+		public uFunc()
+			: base()
+		{ }
+
+		public uFunc(Func<T0, TReturn> handler)
+			: base(handler)
+		{ }
 
 		public TReturn Invoke(T0 arg0)
 		{
@@ -92,6 +108,14 @@ namespace Vexe.Runtime.Types
 			get { return typeof(TReturn); }
 		}
 
+		public uFunc()
+			: base()
+		{ }
+
+		public uFunc(Func<T0, T1, TReturn> handler)
+			: base(handler)
+		{ }
+
 		public TReturn Invoke(T0 arg0, T1 arg1)
 		{
 			return Value.SafeInvoke(arg0, arg1);
@@ -130,6 +154,14 @@ namespace Vexe.Runtime.Types
 			get { return typeof(TReturn); }
 		}
 
+		public uFunc()
+			: base()
+		{ }
+
+		public uFunc(Func<T0, T1, T2, TReturn> handler)
+			: base(handler)
+		{ }
+
 		public TReturn Invoke(T0 arg0, T1 arg1, T2 arg2)
 		{
 			return Value.SafeInvoke(arg0, arg1, arg2);
@@ -167,6 +199,14 @@ namespace Vexe.Runtime.Types
 		{
 			get { return typeof(TReturn); }
 		}
+
+		public uFunc()
+			: base()
+		{ }
+
+		public uFunc(Func<T0, T1, T2, T3, TReturn> handler)
+			: base(handler)
+		{ }
 
 		public TReturn Invoke(T0 arg0, T1 arg1, T2 arg2, T3 arg3)
 		{

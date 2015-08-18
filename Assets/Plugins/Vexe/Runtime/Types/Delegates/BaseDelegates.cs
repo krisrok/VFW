@@ -35,6 +35,16 @@ namespace Vexe.Runtime.Types
 			}
 		}
 
+		public uBaseDelegate()
+			: base()
+		{ }
+
+		public uBaseDelegate(T handler)
+			: base()
+		{
+			Add(handler);
+		}
+
 		public void Add(T handler)
 		{
 			handlers.Add(new Handler

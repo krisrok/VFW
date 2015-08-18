@@ -16,6 +16,16 @@ namespace Vexe.Runtime.Types
 			get { return typeof(void); }
 		}
 
+		public uAction()
+			: base()
+		{ }
+
+		public uAction(Action handler)
+			: base()
+		{
+			Add(handler);
+		}
+
 		public void Invoke()
 		{
 			Value.SafeInvoke();
@@ -59,6 +69,16 @@ namespace Vexe.Runtime.Types
 			Value.SafeInvoke(arg0);
 		}
 
+		public uAction()
+			: base()
+		{ }
+
+		public uAction(Action<T0> handler)
+			: base()
+		{
+			Add(handler);
+		}
+
 		protected override void DirectAdd(Action<T0> handler)
 		{
 			directValue += handler;
@@ -90,6 +110,16 @@ namespace Vexe.Runtime.Types
 		public override Type ReturnType
 		{
 			get { return typeof(void); }
+		}
+
+		public uAction()
+			: base()
+		{ }
+
+		public uAction(Action<T0, T1> handler)
+			: base()
+		{
+			Add(handler);
 		}
 
 		public void Invoke(T0 arg0, T1 arg1)
@@ -130,6 +160,16 @@ namespace Vexe.Runtime.Types
 			get { return typeof(void); }
 		}
 
+		public uAction()
+			: base()
+		{ }
+
+		public uAction(Action<T0, T1, T2> handler)
+			: base()
+		{
+			Add(handler);
+		}
+
 		public void Invoke(T0 arg0, T1 arg1, T2 arg2)
 		{
 			Value.SafeInvoke(arg0, arg1, arg2);
@@ -166,6 +206,16 @@ namespace Vexe.Runtime.Types
 		public override Type ReturnType
 		{
 			get { return typeof(void); }
+		}
+
+		public uAction()
+			: base()
+		{ }
+
+		public uAction(Action<T0, T1, T2, T3> handler)
+			: base()
+		{
+			Add(handler);
 		}
 
 		public void Invoke(T0 arg0, T1 arg1, T2 arg2, T3 arg3)
